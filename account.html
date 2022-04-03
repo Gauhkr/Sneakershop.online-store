@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>All Products - SNEAKERSHOP </title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="images/44.png" width="150px"></a>
+      </div>
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="account.html">Account</a></li>
+        </ul>
+      </nav>
+      <a href="cart.html"> <img src="images/cart.png" width="30px" height="30px"></a>
+      <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+  </div>
+<!---accountpage--->
+<div class="accountpage">
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <img src="images/b0.png" width="100%">
+      </div>
+      <div class="col-2">
+        <div class="form-container">
+          <div class="form-btn">
+            <span onclick="login()">Login</span>
+            <span onclick="register()">Register</span>
+            <hr id="Indicator">
+          </div>
+          <form id="LoginForm">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button type="submit" class="btn">Login</button>
+            <a href="">Forgot password</a>
+          </form>
+          <form id="RegisterForm">
+            <input type="text" placeholder="Username">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button type="submit" class="btn">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---footer--->
+<div class="footer">
+  <div class="container2">
+    <div class="row3">
+      <div class="footer-col">
+        <img src="images/001.jpg">
+        <h4>Contact Us</h4>
+        <p>+77074622199</p>
+      </div>
+      <div class="footer-col">
+        <h4>Addresses</h4>
+        <ol>
+          <li><a href="#">Imanova 41</a></li>
+          <li><a href="#">Turkestan 8/1</a></li>
+        </ol>
+        <br><hr><br>
+        <p> <strong>Work Shedule:</strong> <br> 10:00-21:00</p>
+      </div>
+      <div class="footer-col">
+        <h4> Useful Links</h4>
+        <ul>
+          <li><a href="#">Coupons</a></li>
+          <li><a href="#">Blog post</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">Join Affiliate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4> Follow Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <p>Instagram: <br> <em>@sneakershop_astana</em> </p>
+          <img src="images/pngegg.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+      function menutoggle() {
+        if(MenuItems.style.maxHeight == "0px")
+          {
+          MenuItems.style.maxHeight = "200px";
+          }
+        else
+          {
+          MenuItems.style.maxHeight = "0px";
+          }
+       }
+    </script>
+    <script>
+      var LoginForm = document.getElementById("LoginForm");
+      var RegisterForm = document.getElementById("RegisterForm");
+      var Indicator = document.getElementById("Indicator");
+          function register(){
+            RegisterForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+          }
+
+          function login(){
+            RegisterForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+          }
+    </script>
+  </body>
+</html>
